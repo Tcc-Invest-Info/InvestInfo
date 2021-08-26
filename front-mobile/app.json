@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "InvestInfo",
-    "slug": "InvestInfo",
+    "name": "front-mobile",
+    "slug": "front-mobile",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
