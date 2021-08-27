@@ -8,7 +8,7 @@ import {
 } from 'react-native'
 import backgroundImage from '../../../assets/background.png'
 import styles from './styles'
-import { AntDesign } from '@expo/vector-icons';
+import { Entypo } from '@expo/vector-icons';
 
 export default function Login (){
 
@@ -18,7 +18,7 @@ export default function Login (){
                 <View
                     style={styles.ct_bt_voltar}>
                         <TouchableOpacity>
-                            <AntDesign name="back" size={40} color="black" style={styles.ion_back}/>
+                            <Entypo name="reply" size={50} color="black" style={styles.ion_back}/>
                         </TouchableOpacity>
                 </View>
                 <View
