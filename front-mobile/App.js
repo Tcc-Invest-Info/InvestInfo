@@ -3,14 +3,14 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Login from './src/pages/Login';
 import Cadastro from './src/pages/Cadastro'
-import Teste from './src/pages/Teste'
 import EsqSenha from './src/pages/EsqSenha'
 import Menu from './src/pages/Menu'
+
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Teste/>
+      <Login/>
       <StatusBar style="auto" />
     </View>
   );
