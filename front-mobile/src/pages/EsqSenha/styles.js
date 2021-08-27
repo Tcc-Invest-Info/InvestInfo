@@ -28,7 +28,13 @@ const styles = StyleSheet.create({
         margin:20,
         borderRadius:20
     },
-    bt_cadastrar:{ 
+    text_email:{
+        fontSize:20,
+        textAlign:'center',
+        fontWeight:'bold'
+
+    },
+    bt_redefinir:{ 
         alignItems:'center',
         justifyContent:'center',
         backgroundColor:'#00CED1',
@@ -37,16 +43,12 @@ const styles = StyleSheet.create({
         borderRadius:10,
         marginTop:50
     },
-    text_cadastrar:{
+    text_redefinir:{
         fontSize:25,
         color:'#fff',
         fontWeight:'bold',
     },
-    bt_cadastro:{
-        fontSize:15,
-        color:'#4682B4',
-        marginTop:80
-    },  
+
 })
 
 export default styles

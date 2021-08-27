@@ -25,26 +25,16 @@ export default function Login (){
                     style={styles.container}>
                     <TextInput
                         style={styles.input}
-                        placeholder='Nome completo'/>
-                    <TextInput
-                        style={styles.input}
-                        placeholder='E-mail'/>
-                    <TextInput
-                        style={styles.input}
-                        placeholder='Senha'
-                        secureTextEntry={true}/>
-                    <TextInput
-                        style={styles.input}
-                        placeholder='Confirmar senha'
-                        secureTextEntry={true}/>
-                </View>
-                <View
-                    style={styles.container}>
+                        placeholder='Informe seu email'/>
+                    <Text
+                        style={styles.text_email}>
+                        Uma senha sera eniada para seu email
+                    </Text>
                     <TouchableOpacity
-                        style={styles.bt_cadastrar}>
+                        style={styles.bt_redefinir}>
                         <Text
-                            style={styles.text_cadastrar}>
-                            Cadastrar
+                            style={styles.text_redefinir}>
+                            Enviar
                         </Text>
                     </TouchableOpacity>
                 </View>
