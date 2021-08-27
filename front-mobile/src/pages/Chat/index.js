@@ -10,9 +10,12 @@ import backgroundImage from '../../../assets/chat.png'
 import styles from './styles'
 import { Entypo } from '@expo/vector-icons';
 
-export default function Login ({navigation}){
+export default function ChatBoot ({navigation}){
 
     return(
-        <Text>Tela do chat</Text>
+        <ImageBackground 
+        source={backgroundImage} style={styles.backgorund}>
+
+         </ImageBackground>
     )
 }

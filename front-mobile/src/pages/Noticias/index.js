@@ -6,13 +6,16 @@ import {
         TouchableOpacity,
         TextInput
 } from 'react-native'
-import backgroundImage from '../../../assets/chat.png'
+import backgroundImage from '../../../assets/noticias.png'
 import styles from './styles'
 import { Entypo } from '@expo/vector-icons';
 
-export default function Login ({navigation}){
+export default function ChatBoot ({navigation}){
 
     return(
-        <Text>Tela de noticias</Text>
+        <ImageBackground 
+        source={backgroundImage} style={styles.backgorund}>
+
+         </ImageBackground>
     )
 }

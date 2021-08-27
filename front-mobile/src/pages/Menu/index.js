@@ -10,7 +10,18 @@ import backgroundImage from '../../../assets/menuOptions.png'
 import styles from './styles'
 import {Entypo } from '@expo/vector-icons'
 
-export default function Login ({navigation}){
+export default function Menu ({navigation}){
+
+    function ajudaAlert(){
+        Alert.alert('Menu de Opções', 
+                    '"Conceitos": você ira interagir com um Chatboot ' + 
+                    'sobre diversos assuntos relaciondos a educação financeira '+
+                    '"Noticias": Acesso as principais noticias relacionas a educação financeira',[
+            {
+                text:'OK',
+            }
+        ])
+    }
 
     return(
         <ImageBackground 
@@ -38,7 +49,8 @@ export default function Login ({navigation}){
                             <Text>Noticias</Text>
                         </TouchableOpacity>
                         <TouchableOpacity
-                            style={styles.icons}>
+                            style={styles.icons}
+                            onPress={()=> ajudaAlert()}>
                             <Entypo name="help" size={70} color="black" />
                             <Text>Ajuda</Text>
                         </TouchableOpacity>

@@ -10,7 +10,18 @@ import {
 import backgroundImage from '../../../assets/background.png'
 import styles from './styles'
 
-export default function Login ({navigation}){
+export default function Cadastrar ({navigation}){
+
+    function cadatroAlert(){
+        Alert.alert('Cadastro de usuario', 
+                    'cadastro realizado',[
+            {
+                text:'OK',
+                onPress(){navigation.navigate('Login')
+                }
+            }
+        ])
+    }
 
     return(
         <ImageBackground 
@@ -33,7 +44,7 @@ export default function Login ({navigation}){
                         style={styles.container}>
                         <TouchableOpacity
 
-                            onPress={()=> navigation.navigate('Login')}
+                            onPress={()=> cadatroAlert()}
                             style={styles.bt_cadastrar}>
                             <Text
                                 style={styles.text_cadastrar}>

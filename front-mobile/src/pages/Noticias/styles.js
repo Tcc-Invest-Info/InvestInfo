@@ -1,11 +1,14 @@
 import {StyleSheet, Dimensions} from  'react-native'
 
 const styles = StyleSheet.create({
-    container:{
+
+    backgorund:{
         flex:1,
-        alignItems:'center',
-        justifyContent:'center'
-    },
+        width:'100%',
+        justifyContent:'center',
+        resizeMode:'cover',
+    }
+
 })
 
 export default styles

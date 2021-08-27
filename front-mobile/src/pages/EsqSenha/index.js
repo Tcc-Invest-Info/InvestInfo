@@ -4,13 +4,25 @@ import {
         View, 
         Text, 
         TouchableOpacity,
-        TextInput
+        TextInput,
+        Alert
 } from 'react-native'
 import backgroundImage from '../../../assets/background.png'
 import styles from './styles'
 import { Entypo } from '@expo/vector-icons';
 
-export default function Login ({navigation}){
+export default function EsqSenha ({navigation}){
+
+    function cadatroAlert(){
+        Alert.alert('Redefinir senha', 
+                    'Senha enviada para seu E-mail',[
+            {
+                text:'OK',
+                onPress(){navigation.navigate('Login')
+                }
+            }
+        ])
+    }
 
     return(
         <ImageBackground 
@@ -29,7 +41,7 @@ export default function Login ({navigation}){
                 <View
                     style={styles.container}>
                     <TouchableOpacity
-                    onPress={()=> navigation.navigate('Login')}
+                    onPress={()=> cadatroAlert()}
                         style={styles.bt_redefinir}>
                         <Text
                             style={styles.text_redefinir}>
