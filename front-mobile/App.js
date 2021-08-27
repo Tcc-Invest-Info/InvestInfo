@@ -1,26 +1,14 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
 import Login from './src/pages/Login';
 import Cadastro from './src/pages/Cadastro'
 import EsqSenha from './src/pages/EsqSenha'
 import Menu from './src/pages/Menu'
+import Teste1 from './src/pages/Teste_1'
+import Teste2 from './src/pages/Teste_2'
 
 
 export default function App() {
   return (
-    <View style={styles.container}>
       <Login/>
-      <StatusBar style="auto" />
-    </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
