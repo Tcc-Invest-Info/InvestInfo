@@ -6,16 +6,13 @@ import {
         TouchableOpacity,
         TextInput
 } from 'react-native'
-import backgroundImage from '../../../assets/background.png'
+import backgroundImage from '../../../assets/chat.png'
 import styles from './styles'
 import { Entypo } from '@expo/vector-icons';
 
 export default function Login ({navigation}){
 
     return(
-        <View
-            style={styles.container}>
-        </View>
-
+        <Text>Tela de noticias</Text>
     )
 }

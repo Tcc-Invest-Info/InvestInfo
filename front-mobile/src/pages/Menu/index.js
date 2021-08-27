@@ -4,7 +4,7 @@ import {
         View, 
         Text, 
         TouchableOpacity,
-        TextInput
+        Alert
 } from 'react-native'
 import backgroundImage from '../../../assets/menuOptions.png'
 import styles from './styles'
