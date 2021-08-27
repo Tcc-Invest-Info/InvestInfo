@@ -10,7 +10,7 @@ import Menu from './src/pages/Menu'
 export default function App() {
   return (
     <View style={styles.container}>
-      <Menu/>
+      <Teste/>
       <StatusBar style="auto" />
     </View>
   );

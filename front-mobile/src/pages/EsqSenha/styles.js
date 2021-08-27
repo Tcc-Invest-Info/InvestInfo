@@ -31,7 +31,8 @@ const styles = StyleSheet.create({
     text_email:{
         fontSize:20,
         textAlign:'center',
-        fontWeight:'bold'
+        fontWeight:'bold',
+        marginHorizontal:50
 
     },
     bt_redefinir:{ 
