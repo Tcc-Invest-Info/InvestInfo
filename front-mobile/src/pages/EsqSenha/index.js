@@ -10,18 +10,11 @@ import backgroundImage from '../../../assets/background.png'
 import styles from './styles'
 import { Entypo } from '@expo/vector-icons';
 
-export default function Login (){
+export default function Login ({navigation}){
 
     return(
         <ImageBackground 
             source={backgroundImage} style={styles.backgorund}>
-                <View
-                    style={styles.ct_bt_voltar}>
-                        <TouchableOpacity>
-                        <Entypo name="reply" size={50} color="black" style={styles.ion_back}/>
-                        </TouchableOpacity>
-                </View>
-
                 <View
                     style={styles.container}>
                     <TextInput
@@ -36,6 +29,7 @@ export default function Login (){
                 <View
                     style={styles.container}>
                     <TouchableOpacity
+                    onPress={()=> navigation.navigate('Login')}
                         style={styles.bt_redefinir}>
                         <Text
                             style={styles.text_redefinir}>

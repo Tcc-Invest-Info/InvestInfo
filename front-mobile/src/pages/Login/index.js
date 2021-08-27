@@ -9,7 +9,7 @@ import {
 import backgroundImage from '../../../assets/background.png'
 import styles from './styles'
 
-export default function Login (){
+export default function Login ({ navigation }){
 
     return(
         <ImageBackground 
@@ -26,7 +26,8 @@ export default function Login (){
                 </View>
                 <View
                     style={styles.ct_esq_senha}>
-                        <TouchableOpacity>
+                        <TouchableOpacity
+                            onPress={()=> navigation.navigate('EsqSenha')}>
                             <Text
                                 style={styles.bt_esq_senha}>Esqueci minha senha</Text>
                         </TouchableOpacity>
@@ -34,6 +35,7 @@ export default function Login (){
                 <View
                     style={styles.container}>
                     <TouchableOpacity
+                    onPress={()=> navigation.navigate('Menu')}
                         style={styles.bt_acessar}>
                         <Text
                             style={styles.text_acessar}>
@@ -43,7 +45,8 @@ export default function Login (){
                 </View>
                 <View
                     style={styles.container}>
-                    <TouchableOpacity>
+                    <TouchableOpacity
+                        onPress={()=> navigation.navigate('Cadastro')}>
                         <Text
                             style={styles.bt_cadastro}>
                             Novo por aqui? cadastre-se

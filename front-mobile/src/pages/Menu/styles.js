@@ -1,14 +1,6 @@
 import {StyleSheet, Dimensions} from  'react-native'
 
 const styles = StyleSheet.create({
-    ct_bt_voltar:{
-        alignItems:'flex-start',
-        justifyContent:'center',
-        height:'20%'
-    },
-    ion_back:{
-        marginLeft:20
-    },
     backgorund:{
         flex:1,
         width:'100%',

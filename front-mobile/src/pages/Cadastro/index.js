@@ -10,19 +10,11 @@ import backgroundImage from '../../../assets/background.png'
 import styles from './styles'
 import { Entypo } from '@expo/vector-icons';
 
-export default function Login (){
+export default function Login ({navigation}){
 
     return(
         <ImageBackground 
             source={backgroundImage} style={styles.backgorund}>
-                <View
-                    style={styles.ct_bt_voltar}>
-                        <TouchableOpacity>
-                            <Entypo name="reply" size={50} color="black" style={styles.ion_back}/>
-                        </TouchableOpacity>
-                </View>
-                <View
-                    style={styles.container}>
                     <TextInput
                         style={styles.input}
                         placeholder='Nome completo'/>
@@ -37,17 +29,17 @@ export default function Login (){
                         style={styles.input}
                         placeholder='Confirmar senha'
                         secureTextEntry={true}/>
-                </View>
-                <View
-                    style={styles.container}>
-                    <TouchableOpacity
-                        style={styles.bt_cadastrar}>
-                        <Text
-                            style={styles.text_cadastrar}>
-                            Cadastrar
-                        </Text>
-                    </TouchableOpacity>
-                </View>
+                    <View
+                        style={styles.container}>
+                        <TouchableOpacity
+                            onPress={()=> navigation.navigate('Login')}
+                            style={styles.bt_cadastrar}>
+                            <Text
+                                style={styles.text_cadastrar}>
+                                Cadastrar
+                            </Text>
+                        </TouchableOpacity>
+                    </View>
         </ImageBackground>
     )
 }
