@@ -21,15 +21,20 @@ export default function Login (){
                             <AntDesign name="back" size={40} color="black" style={styles.ion_back}/>
                         </TouchableOpacity>
                 </View>
+
                 <View
                     style={styles.container}>
                     <TextInput
                         style={styles.input}
                         placeholder='Informe seu email'/>
+                </View>
+
                     <Text
                         style={styles.text_email}>
-                        Uma senha sera eniada para seu email
+                        Uma nova senha sera enviada para seu email
                     </Text>
+                <View
+                    style={styles.container}>
                     <TouchableOpacity
                         style={styles.bt_redefinir}>
                         <Text

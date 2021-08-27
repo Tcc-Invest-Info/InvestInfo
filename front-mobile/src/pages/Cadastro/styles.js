@@ -1,11 +1,10 @@
-import {StyleSheet} from  'react-native'
+import {StyleSheet, Dimensions} from  'react-native'
 
 const styles = StyleSheet.create({
     ct_bt_voltar:{
         alignItems:'flex-start',
         justifyContent:'center',
-        marginTop:50,
-        height:50,
+        height:'20%'
     },
     ion_back:{
         marginLeft:20
@@ -17,15 +16,17 @@ const styles = StyleSheet.create({
         resizeMode:'cover',
     },
     container:{
+        flex:1,
         alignItems:'center',
         justifyContent:'center',
+
     },
     input:{
         fontSize:20,
         width:'75%',
         backgroundColor: '#DCDCDC',
         padding:15,
-        margin:20,
+        margin:15,
         borderRadius:20
     },
     bt_cadastrar:{ 
@@ -35,7 +36,7 @@ const styles = StyleSheet.create({
         width: '60%',
         height: 50,
         borderRadius:10,
-        marginTop:50
+
     },
     text_cadastrar:{
         fontSize:25,

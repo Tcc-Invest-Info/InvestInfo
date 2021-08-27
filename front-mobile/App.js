@@ -9,7 +9,7 @@ import EsqSenha from './src/pages/EsqSenha'
 export default function App() {
   return (
     <View style={styles.container}>
-      <Cadastro/>
+      <EsqSenha/>
       <StatusBar style="auto" />
     </View>
   );
