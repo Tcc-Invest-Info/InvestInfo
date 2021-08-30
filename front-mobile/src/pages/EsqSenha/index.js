@@ -28,26 +28,21 @@ export default function EsqSenha ({navigation}){
         <ImageBackground 
             source={backgroundImage} style={styles.backgorund}>
                 <View
-                    style={styles.container}>
-                    <TextInput
-                        style={styles.input}
-                        placeholder='Informe seu email'/>
-                </View>
-
-                    <Text
-                        style={styles.text_email}>
-                        Uma nova senha sera enviada para seu email
-                    </Text>
-                <View
-                    style={styles.container}>
-                    <TouchableOpacity
-                    onPress={()=> cadatroAlert()}
-                        style={styles.bt_redefinir}>
+                    style={styles.ct_Central}>
                         <Text
-                            style={styles.text_redefinir}>
-                            Enviar
-                        </Text>
-                    </TouchableOpacity>
+                            style={styles.text_email}>
+                                Enviar senha para meu E-mail</Text>
+                        <TextInput
+                             style={styles.input}
+                             placeholder='Informe seu email'/>
+                        <TouchableOpacity
+                        onPress={()=> cadatroAlert()}
+                            style={styles.bt_redefinir}>
+                            <Text
+                                style={styles.text_redefinir}>
+                                Enviar
+                            </Text>
+                        </TouchableOpacity>
                 </View>
         </ImageBackground>
     )

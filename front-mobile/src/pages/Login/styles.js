@@ -7,6 +7,22 @@ const styles = StyleSheet.create({
         justifyContent:'center',
         resizeMode:'cover',
     },
+    ct_Login:{
+        flexDirection:'row',
+        justifyContent:'center'
+    },
+    text_Log:{
+        fontSize:30,
+        fontWeight:'bold',
+        color:'black',
+        marginVertical:30
+    },
+    text_in:{
+        fontSize:30,
+        fontWeight:'bold',
+        color:'#fff',
+        marginVertical:30
+    },
     container:{
         alignItems:'center',
         justifyContent:'center',

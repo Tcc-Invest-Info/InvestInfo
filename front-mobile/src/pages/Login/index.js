@@ -14,6 +14,11 @@ export default function Login ({ navigation }){
     return(
         <ImageBackground 
             source={backgroundImage} style={styles.backgorund}>
+                <View 
+                    style={styles.ct_Login}>
+                    <Text style={styles.text_Log}>Log</Text>
+                    <Text style={styles.text_in}>in</Text>
+                </View>
                 <View
                     style={styles.container}>
                     <TextInput
@@ -27,7 +32,7 @@ export default function Login ({ navigation }){
                 <View
                     style={styles.ct_esq_senha}>
                         <TouchableOpacity
-                            onPress={()=> navigation.navigate('EsqSenha')}>
+                            onPress={()=> navigation.navigate('Redefinir senha')}>
                             <Text
                                 style={styles.bt_esq_senha}>Esqueci minha senha</Text>
                         </TouchableOpacity>

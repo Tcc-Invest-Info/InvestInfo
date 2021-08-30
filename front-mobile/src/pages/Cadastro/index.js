@@ -26,6 +26,11 @@ export default function Cadastrar ({navigation}){
     return(
         <ImageBackground 
             source={backgroundImage} style={styles.backgorund}>
+                    <View
+                        style={styles.ct_Cadastro}>
+                         <Text style={styles.text_Cadas}>Cadas</Text>
+                         <Text style={styles.text_tro}>tro</Text>
+                    </View>
                     <TextInput
                         style={styles.input}
                         placeholder='Nome completo'/>

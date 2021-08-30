@@ -8,6 +8,23 @@ const styles = StyleSheet.create({
         justifyContent:'center',
         resizeMode:'cover',
     },
+    ct_Cadastro:{
+        flexDirection:'row',
+        justifyContent:'center'
+    },
+    text_Cadas:{
+        fontSize:30,
+        fontWeight:'bold',
+        color:'black',
+        marginVertical:30
+
+    },
+    text_tro:{
+        fontSize:30,
+        fontWeight:'bold',
+        color:'#fff',
+        marginVertical:30
+    },
     container:{
         alignItems:'center',
         justifyContent:'center',

@@ -1,48 +1,45 @@
 import {StyleSheet, Dimensions} from  'react-native'
 
 const styles = StyleSheet.create({
-    ct_bt_voltar:{
-        alignItems:'flex-start',
-        justifyContent:'center',
-        height:'20%'
-    },
-    ion_back:{
-        marginLeft:20
-    },
     backgorund:{
         flex:1,
         width:'100%',
         justifyContent:'center',
+        alignItems:'center',
         resizeMode:'cover',
     },
-    container:{
-        flex:1,
+    ct_Central:{
+        backgroundColor:'#fff',
+        width:'80%',
+        height:'30%',
+        borderRadius:30,
         alignItems:'center',
-        justifyContent:'center',
-    },
-    input:{
-        fontSize:20,
-        width:'75%',
-        backgroundColor: '#DCDCDC',
-        padding:15,
-        margin:20,
-        borderRadius:20
+        justifyContent:'center'
     },
     text_email:{
-        fontSize:20,
+        fontSize:15,
         textAlign:'center',
         fontWeight:'bold',
-        marginHorizontal:50
-
+        marginHorizontal:50,
+        marginVertical:10,
+        width:'90%',
+    },
+    input:{
+        fontSize:15,
+        width:'90%',
+        backgroundColor: '#DCDCDC',
+        padding:10,
+        borderRadius:20,
+        marginVertical:10
     },
     bt_redefinir:{ 
         alignItems:'center',
         justifyContent:'center',
         backgroundColor:'#00CED1',
-        width: '60%',
+        width:'90%',
         height: 50,
         borderRadius:10,
-        marginTop:50
+        marginVertical:10
     },
     text_redefinir:{
         fontSize:25,

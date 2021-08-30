@@ -17,7 +17,7 @@ export default function App(){
           <Stack.Navigator initialRouteName="Login">
               <Stack.Screen name= "Login" component={Login}/>
               <Stack.Screen name= "Cadastro" component={Cadastro}/>
-              <Stack.Screen name= "EsqSenha" component={EsqSenha}/>
+              <Stack.Screen name= "Redefinir senha" component={EsqSenha}/>
               <Stack.Screen name= "Menu" component={Menu}/>
               <Stack.Screen name= "Conceitos" component={Chat}/>
               <Stack.Screen name= "Noticias" component={Noticias}/>
