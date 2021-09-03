@@ -1,4 +1,4 @@
-package com.devsuperior.infoinvest.config;
+package com.infoinvest.config;
 
 import java.util.Arrays;
 

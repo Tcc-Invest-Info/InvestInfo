@@ -1,4 +1,4 @@
-package com.devsuperior.infoinvest;
+package com.infoinvest;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,5 +9,4 @@ public class InfoinvestApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(InfoinvestApplication.class, args);
 	}
-
 }

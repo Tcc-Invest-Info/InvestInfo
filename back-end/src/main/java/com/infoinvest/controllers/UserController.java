@@ -1,4 +1,4 @@
-package com.devsuperior.infoinvest.controllers;
+package com.infoinvest.controllers;
 
 import java.util.List;
 
@@ -8,19 +8,19 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.devsuperior.infoinvest.dto.UsuarioDTO;
-import com.devsuperior.infoinvest.services.UsuarioService;
+import com.infoinvest.dto.UserDTO;
+import com.infoinvest.services.UserService;
 
 @RestController
-@RequestMapping(value = "/usuarios")
-public class UsuarioController {
+@RequestMapping(value = "/users")
+public class UserController {
 
 	@Autowired
-	private UsuarioService service;
+	private UserService service;
 
 	@GetMapping
-	public ResponseEntity<List<UsuarioDTO>> findAll() {
-		List<UsuarioDTO> list = service.findAll();
+	public ResponseEntity<List<UserDTO>> findAll() {
+		List<UserDTO> list = service.findAll();
 		return ResponseEntity.ok().body(list);
 	}
 }
