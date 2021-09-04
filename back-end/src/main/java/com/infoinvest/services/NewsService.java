@@ -19,7 +19,7 @@ public class NewsService {
 	
 	@Transactional(readOnly = true)
 	public List<NewsDTO> findAll() {
-		List<News> list = repository.findAllByOrderByDateNewsAsc();
+		List<News> list = repository.findAllByOrderByDateNewsDesc();
 		return list.stream().map(x -> new NewsDTO(x)).collect(Collectors.toList());
 	}
 }

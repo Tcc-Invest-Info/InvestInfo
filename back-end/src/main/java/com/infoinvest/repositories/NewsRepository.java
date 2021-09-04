@@ -8,5 +8,5 @@ import com.infoinvest.entities.News;
 
 public interface NewsRepository extends JpaRepository<News, Long> {
 	
-	List<News> findAllByOrderByDateNewsAsc();
+	List<News> findAllByOrderByDateNewsDesc();
 }

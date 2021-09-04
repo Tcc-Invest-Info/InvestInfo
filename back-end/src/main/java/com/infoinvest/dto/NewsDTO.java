@@ -9,27 +9,27 @@ public class NewsDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	private Long id;
-	private String description;
-	private String linkNews;
+	private String title;
+	private String url;
 	private String dateNews;
 	
 	public NewsDTO() {
 	}
 
-	public NewsDTO(Long id, String description, String linkNews, String dateNews) {
+	public NewsDTO(Long id, String title, String url, String dateNews) {
 		this.id = id;
-		this.description = description;
-		this.linkNews = linkNews;
+		this.title = title;
+		this.url = url;
 		this.dateNews = dateNews;
 	}
 
 	public NewsDTO(News entities) {
 		id = entities.getId();
-		description = entities.getDescription();
-		linkNews = entities.getLinkNews();
+		title = entities.getTitle();
+		url = entities.getUrl();
 		dateNews = entities.getDateNews();
 	}
-
+	
 	public Long getId() {
 		return id;
 	}
@@ -38,20 +38,20 @@ public class NewsDTO implements Serializable {
 		this.id = id;
 	}
 
-	public String getDescription() {
-		return description;
+	public String getTitle() {
+		return title;
 	}
 
-	public void setDescription(String description) {
-		this.description = description;
+	public void setTitle(String title) {
+		this.title = title;
 	}
 
-	public String getLinkNews() {
-		return linkNews;
+	public String getUrl() {
+		return url;
 	}
 
-	public void setLinkNews(String linkNews) {
-		this.linkNews = linkNews;
+	public void setUrl(String url) {
+		this.url = url;
 	}
 
 	public String getDateNews() {
