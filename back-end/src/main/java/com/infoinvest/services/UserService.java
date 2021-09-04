@@ -23,4 +23,11 @@ public class UserService {
 		List<User> list = repository.findAllByOrderByNameAsc();
 		return list.stream().map(x -> new UserDTO(x)).collect(Collectors.toList());
 	}
+	
+	@Transactional
+	public UserDTO insert(UserDTO dto) {
+		User user = new User(null, dto.getName(), dto.getEmail(), dto.getPassword());
+		user = repository.save(user);
+		return new UserDTO(user);
+	}
 }
