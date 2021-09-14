@@ -6,7 +6,7 @@ import {
         TouchableOpacity,
         Alert
 } from 'react-native'
-import backgroundImage from '../../../assets/menuOptions.png'
+import backgroundImage from '../../../assets/fundoMenu.png'
 import styles from './styles'
 import {Entypo } from '@expo/vector-icons'
 

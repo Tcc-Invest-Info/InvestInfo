@@ -1,14 +1,35 @@
-import {StyleSheet, Dimensions} from  'react-native'
+import {StyleSheet} from  'react-native'
 
 const styles = StyleSheet.create({
-
-    backgorund:{
+    container:{
         flex:1,
+    },
+    container_Image:{
+        height:'15%',
+        alignItems:'center',
+    },
+    backgorund:{
+        height:'100%',
         width:'100%',
+        borderWidth:1
+    },
+    scrollView:{
+        flex:1,   
+    },
+    container_Noticias:{
+        height:100,  
+        backgroundColor:'#B0C4DE',
+        margin:10,
+        alignItems:'center',
         justifyContent:'center',
-        resizeMode:'cover',
-    }
+        borderRadius:10
 
+    },
+    noticias:{
+        fontSize:17,
+        padding:10,
+        textAlign:'center'
+    }
 })
 
 export default styles
