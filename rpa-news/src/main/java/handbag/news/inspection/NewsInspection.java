@@ -1,10 +1,10 @@
 package handbag.news.inspection;
 
-public class News {
+public class NewsInspection {
 
 	private NewsController newsController;
 
-	public News() {
+	public NewsInspection() {
 		newsController = new NewsController();
 	}
 

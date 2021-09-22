@@ -7,14 +7,19 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import handbag.news.model.dao.DaoFactory;
+import handbag.news.model.dao.NewsDao;
+import handbag.news.model.entities.News;
 import handbag.news.utils.SeleniumUtils;
 
 public class NewsController {
 
 	WebDriver driver;
 	private String url = "https://www.infomoney.com.br/ultimas-noticias/";
+	NewsDao newsDao;
 
 	public NewsController() {
+		newsDao = DaoFactory.createSellerDao();
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 	}
@@ -47,9 +52,13 @@ public class NewsController {
 		try {
 			List<WebElement> titles = driver.findElements(By.xpath("//span[@class='hl-title hl-title-2']/a"));
 			for (WebElement title : titles) {
-				System.out.println(
-						"Title: " + title.getText() + "\n" + "URL: " + title.getAttribute("href")  
-						+ "\n" + "Data: " + getData(url) + "\n");
+				if (title.getAttribute("href").contains("https://www.infomoney.com.br/mercados")) {
+					if (!checkTitle(title.getText())) {
+						News newNews = new News(null, title.getText(), title.getAttribute("href"),
+								getData(title.getAttribute("href")));
+						newsDao.insert(newNews);
+					}
+				}
 			}
 		} catch (Exception e) {
 			throw new Exception("Error waiting for news screen to load. \nException: " + e.getMessage());
@@ -68,6 +77,18 @@ public class NewsController {
 			return data;
 		} catch (Exception e) {
 			throw new Exception("Error to catch news time. \nException: " + e.getMessage());
+		}
+	}
+
+	public boolean checkTitle(String title) throws Exception {
+		try {
+			for (News news : newsDao.findTitle()) {
+				if (news.getTitle().equals(title))
+					return true;
+			}
+			return false;
+		} catch (Exception e) {
+			throw new Exception("Error for check Title. \nException: " + e.getMessage());
 		}
 	}
 }
