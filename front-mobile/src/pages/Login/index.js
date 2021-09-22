@@ -11,6 +11,11 @@ import styles from './styles'
 
 export default function Login ({ navigation }){
 
+    const state = {
+        email:'',
+        senha:'',
+    }
+
     return(
         <ImageBackground 
             source={backgroundImage} style={styles.backgorund}>
@@ -23,11 +28,14 @@ export default function Login ({ navigation }){
                     style={styles.container}>
                     <TextInput
                         style={styles.input}
-                        placeholder='E-mail'/>
+                        placeholder='E-mail'
+                        keyboardType='email-address'
+                        value={state.email}/>
                     <TextInput
                         style={styles.input}
                         placeholder='Senha'
-                        secureTextEntry={true}/>
+                        secureTextEntry={true}
+                        value={state.senha}/>
                 </View>
                 <View
                     style={styles.ct_esq_senha}>

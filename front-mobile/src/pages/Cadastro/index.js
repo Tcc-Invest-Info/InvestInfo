@@ -1,3 +1,4 @@
+import { setStatusBarNetworkActivityIndicatorVisible } from 'expo-status-bar'
 import React from 'react'
 import { 
         ImageBackground,
@@ -22,6 +23,12 @@ export default function Cadastrar ({navigation}){
             }
         ])
     }
+    const state = {
+        nome:'',
+        email:'',
+        senha:'',
+        confirmasenha:''
+    }
 
     return(
         <ImageBackground 
@@ -33,18 +40,23 @@ export default function Cadastrar ({navigation}){
                     </View>
                     <TextInput
                         style={styles.input}
-                        placeholder='Nome completo'/>
+                        placeholder='Nome completo'
+                        value={state.nome}/>
                     <TextInput
                         style={styles.input}
-                        placeholder='E-mail'/>
+                        placeholder='E-mail'
+                        keyboardType='email-address'
+                        value={state.email}/>
                     <TextInput
                         style={styles.input}
                         placeholder='Senha'
-                        secureTextEntry={true}/>
+                        secureTextEntry={true}
+                        value={state.senha}/>
                     <TextInput
                         style={styles.input}
                         placeholder='Confirmar senha'
-                        secureTextEntry={true}/>
+                        secureTextEntry={true}
+                        value={state.confirmasenha}/>
                     <View
                         style={styles.container}>
                         <TouchableOpacity

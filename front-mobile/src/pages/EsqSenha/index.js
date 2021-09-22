@@ -24,6 +24,10 @@ export default function EsqSenha ({navigation}){
         ])
     }
 
+    const state = {
+        email:'',
+    }
+
     return(
         <ImageBackground 
             source={backgroundImage} style={styles.backgorund}>
@@ -34,7 +38,9 @@ export default function EsqSenha ({navigation}){
                                 Enviar senha para meu E-mail</Text>
                         <TextInput
                              style={styles.input}
-                             placeholder='Informe seu email'/>
+                             placeholder='Informe seu email'
+                             keyboardType='email-address'
+                             value={state.email}/>
                         <TouchableOpacity
                         onPress={()=> cadatroAlert()}
                             style={styles.bt_redefinir}>
