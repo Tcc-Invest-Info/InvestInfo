@@ -52,7 +52,8 @@ public class NewsController {
 		try {
 			List<WebElement> titles = driver.findElements(By.xpath("//span[@class='hl-title hl-title-2']/a"));
 			for (WebElement title : titles) {
-				if (title.getAttribute("href").contains("https://www.infomoney.com.br/mercados")) {
+				if (title.getAttribute("href").contains("https://www.infomoney.com.br/mercados") || 
+						title.getAttribute("href").contains("https://www.infomoney.com.br/economia")) {
 					if (!checkTitle(title.getText())) {
 						News newNews = new News(null, title.getText(), title.getAttribute("href"),
 								getData(title.getAttribute("href")));
