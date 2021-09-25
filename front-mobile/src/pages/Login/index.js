@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { 
         ImageBackground,
         View, 
@@ -7,9 +7,22 @@ import {
         TextInput
 } from 'react-native'
 import backgroundImage from '../../../assets/background.png'
+import api from '../../api';
 import styles from './styles'
 
 export default function Login ({ navigation }){
+
+   /* const[login, setLogin] = useState(); 
+
+    useEffect(() => {
+        getLogin();
+    })
+
+    async function getLogin() {
+        await api.get("/login")
+        .then(response => console.log(response))
+        .catch(error => console.log(error));
+  }  */ 
 
     const state = {
         email:'',

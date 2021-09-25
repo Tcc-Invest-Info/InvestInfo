@@ -20,15 +20,20 @@ const styles = StyleSheet.create({
         height:100,  
         backgroundColor:'#B0C4DE',
         margin:10,
-        alignItems:'center',
         justifyContent:'center',
         borderRadius:10
 
     },
     noticias:{
-        fontSize:17,
+        fontSize:16,
         padding:10,
         textAlign:'center'
+    },
+    data:{
+        fontSize:16,
+        padding:10,
+        fontWeight: "bold",
+        textAlign:'right'
     }
 })
 

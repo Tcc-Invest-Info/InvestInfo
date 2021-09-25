@@ -1,5 +1,5 @@
 import { setStatusBarNetworkActivityIndicatorVisible } from 'expo-status-bar'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { 
         ImageBackground,
         View, 
@@ -9,9 +9,22 @@ import {
         Alert
 } from 'react-native'
 import backgroundImage from '../../../assets/background.png'
+import api from '../../api'
 import styles from './styles'
 
 export default function Cadastrar ({navigation}){
+
+   /* const[usuario, setUsuario] = useState(); 
+
+    useEffect(() => {
+        getUser();
+    })
+
+    async function getUser() {
+        await api.get("/users")
+        .then(response => setUsuario(response.data))
+        .catch(error => console.log(error));
+    } */
 
     function cadatroAlert(){
         Alert.alert('Cadastro de usuario', 
