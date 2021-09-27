@@ -16,7 +16,11 @@ export default function Noticias ({navigation}){
     const[noticias, setNoticias] = useState([{}]); 
 
     useEffect(() => {
-        getNews();
+        let mounted = true;
+        if(mounted){
+            getNews();
+        }
+        return () => mounted = false;
     })
 
     async function getNews() {
@@ -33,22 +37,19 @@ export default function Noticias ({navigation}){
                 </ImageBackground>
             </View>
             <ScrollView style={styles.scrollView}>
-                {noticias.map(obj => (
-                    <View key={obj.id} style={styles.container_Noticias}>
+            {noticias.map((obj, index )=> {
+                    return <View key={index} style={styles.container_Noticias}>
                         <Text style={styles.noticias}
                         onPress={()=>{
                             Linking.openURL(obj.url)
                             }}>
                            {obj.title} 
                         </Text>
-                        <Text style={styles.data}
-                        onPress={()=>{
-                            Linking.openURL(obj.url)
-                            }}>
+                        <Text style={styles.data}>
                            Data: {obj.dateNews}
                         </Text>   
                     </View>   
-                ))
+                })
                 }                                                                    
             </ScrollView>
         </View>
