@@ -31,7 +31,6 @@ const styles = StyleSheet.create({
     },
     data:{
         fontSize:16,
-        padding:10,
         fontWeight: "bold",
         textAlign:'right'
     }
