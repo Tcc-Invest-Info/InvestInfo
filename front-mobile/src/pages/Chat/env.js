@@ -1,0 +1,12 @@
+export const dialogflowConfig = {
+    type: "service_account",
+    project_id: "infoinvest-mtyk",
+    private_key_id: "32c8f673395b7abb327040c4550bdb520fbabe7f",
+    private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQD1cs6rV1Mvl+tL\nQcxYBKVOKxnEDONZ8cAZq9UBEJV/V3lzS9CGisA7EzWwAu3aOHjpnwpGB+2EtepP\nEeYY8ZT+PannNunCe3pXXBpN1HMFv68a8UQrAsFKkAXpzKduF5S5bQIrzkIKF3R3\nn0ZfzsrSATRAXW9RSmn8RR/ZVVeUoyf0qRDaiK/wvIQypRdCNp8XmcV/BC7SKdk1\noKbH3N10xCDBzGprkyxayG6bwbms9M7DfVpJ08d/1epFyR+dvS/V89Hsiv5dZgAj\n30PWk5PpMuxDIMr1WiGhCpQQWc6CPYuXLSKlDz+xBQ42fxc9lpsKGDNmkcjgNBNT\nZMNImFXrAgMBAAECggEAUxEBL4yUqwlDiMsiYHFmDm/YvvhLox+FT0rPghY+OgP9\nJs90KWxgxT1pkIFVROKSzSHVZMD/GchFHXBlynBL58UvsH/tmbOXQmR5xHhPWxU1\nqi0X0GSUzOq0DZ2E1mXln+Fr+C5MPEUW1fsR4o/GJU9iAxx79Wt1Nfqg3jkbNEJf\nqRCYsXrvhpzJF+TWkV1wE2hpVPLA4s1gqB9i9x/TVpWlfeLTbUM1JxqVSSLKL+ZY\napheoziS5/AoaXvgaqRHgTGq4zT1wDQ/QNxTfU5IRerRwyBippVVccysGdmbiaRH\nLSr3pgitveQ7jESppdOZxRF4dmvIHR6tYFeCrmQHZQKBgQD/+849A6P2+a1muksS\nZL+4S0CyvOuq3Zp4OSP9z+hXFtliTEdB6p6oqXzCYUSZfF8sWMmlrQ35B4G5UrBl\n9bZvSPonzJ3NRh7m9GuiUL258cxSZev+ykPTMtpAsIGmpeJmC7vP7o8aNZMlcKKq\n8lyG5laQ7HLcEVazZUaQjqdxJQKBgQD1dtQ9XO5w46ohT8Uke4pbSiEM7NvMt3Vc\n/KXmNhhP1jonQwN9WW7hQvGaxLSj04Z1Za2FoP0pUYdwtP8LhOU82sd3dLkVxMeq\n1cMeMzOhfPjB+UxYnqu5uCTdjSyE1InQV0O41pKSAcALeXdz8kqbISC1FBoytufT\ng29PhPulzwKBgHg3j4HEBerlEvRdpQf8XLV2UeofIyZZcEPpwedfDqRnzKuHWyev\nwdc/0aGQAKF8cU3oXLr77MX5KokYNlOL86OLyD+MrsdKmRSp0SqndJKw5d4Ek7JS\n10uGZE1hF2JmIU7/T7K1PGt4oaRBo4NY0u9fmWPyR3bmhas2cs9Mz4IpAoGABgXM\nX1UQZKSxX+/dHnAJjQPcm7yUCAnYT1fDmkppfkv7UUtLop+3IL/Lvchlxj9CZU8B\nWu4ASCs/73wBZf70wPF9Q2kRwX76hy6Hgw4ujh/K2reLMAF0pTHndagpF3k/iGUb\nvEVHg12XoLByRd4EBpphew/rNKNYPNBUwta4dfECgYA1IMunGkP0ax//gOZ6eqO5\nIP0UPb/giB3COfTQGg/n5DX80HWsAHqwLRxRbKBZ4FSNAt6bMrRIUNt6bFMawFnp\nq4DiCItRS0ODBMBd2yHPuRrGdoPvbRgwgzeBUOeONk1Tbxmn20LkkgkcBevYxJDa\nesDvPYGuiA0VAeGDqX/83g==\n-----END PRIVATE KEY-----\n",
+    client_email: "dialogflow@infoinvest-mtyk.iam.gserviceaccount.com",
+    client_id: "109816025715764119093",
+    auth_uri: "https://accounts.google.com/o/oauth2/auth",
+    token_uri: "https://oauth2.googleapis.com/token",
+    auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs",
+    client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/dialogflow%40infoinvest-mtyk.iam.gserviceaccount.com"
+  }

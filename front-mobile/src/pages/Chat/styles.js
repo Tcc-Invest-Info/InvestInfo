@@ -1,14 +1,9 @@
-import {StyleSheet, Dimensions} from  'react-native'
-
+import {StyleSheet} from  'react-native'
 const styles = StyleSheet.create({
-
     backgorund:{
-        flex:1,
+        height:'100%',
         width:'100%',
-        justifyContent:'center',
-        resizeMode:'cover',
     }
-
 })
 
 export default styles

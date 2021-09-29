@@ -26,10 +26,11 @@ const styles = StyleSheet.create({
     },
     noticias:{
         fontSize:16,
-        padding:10,
+        margin:3,
         textAlign:'center'
     },
     data:{
+        margin:7,
         fontSize:16,
         fontWeight: "bold",
         textAlign:'right'

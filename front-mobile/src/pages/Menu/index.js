@@ -14,7 +14,7 @@ export default function Menu ({navigation}){
 
     function ajudaAlert(){
         Alert.alert('Menu de Opções', 
-                    '"Conceitos": você ira interagir com um Chatboot ' + 
+                    '"Chatboot": você ira interagir com um Chatboot ' + 
                     'sobre diversos assuntos relaciondos a educação financeira '+
                     '"Noticias": Acesso as principais noticias relacionas a educação financeira',[
             {
@@ -40,7 +40,7 @@ export default function Menu ({navigation}){
                             onPress={()=> navigation.navigate('Conceitos')}
                             style={styles.icons}>
                             <Entypo name="chat" size={70} color="black" />
-                            <Text>Conceitos</Text>
+                            <Text>ChatBoot</Text>
                         </TouchableOpacity>
                         <TouchableOpacity
                             onPress={()=> navigation.navigate('Noticias')}

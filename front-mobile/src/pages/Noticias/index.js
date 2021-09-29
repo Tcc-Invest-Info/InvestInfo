@@ -38,17 +38,15 @@ export default function Noticias ({navigation}){
             </View>
             <ScrollView style={styles.scrollView}>
             {noticias.map((obj, index )=> {
-                    return <View key={index} style={styles.container_Noticias}>
-                        <Text style={styles.noticias}
-                        onPress={()=>{
-                            Linking.openURL(obj.url)
-                            }}>
-                           {obj.title} 
-                        </Text>
-                        <Text style={styles.data}>
-                           Data: {obj.dateNews}
-                        </Text>   
-                    </View>   
+                    return (
+                        <View key={index} style={styles.container_Noticias}>
+                            <Text style={styles.noticias}
+                                onPress={()=>{
+                                Linking.openURL(obj.url)}}> {obj.title} 
+                            </Text>
+                            <Text style={styles.data}> Data: {obj.dateNews}</Text>   
+                        </View>  
+                    )
                 })
                 }                                                                    
             </ScrollView>
