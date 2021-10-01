@@ -30,7 +30,7 @@ export default function Menu ({navigation}){
                     style={styles.ct_text_introduction}>
                         <Text
                             style={styles.textIntroduction}>
-                            Ola Lucas, seja bem vindo ao InvestInfo.
+                            Olá Lucas, seja bem vindo ao InvestInfo.
                             O que iremos ver hoje?
                         </Text>
                 </View>
@@ -40,7 +40,7 @@ export default function Menu ({navigation}){
                             onPress={()=> navigation.navigate('Conceitos')}
                             style={styles.icons}>
                             <Entypo name="chat" size={70} color="black" />
-                            <Text>ChatBoot</Text>
+                            <Text>Chatbot</Text>
                         </TouchableOpacity>
                         <TouchableOpacity
                             onPress={()=> navigation.navigate('Noticias')}
