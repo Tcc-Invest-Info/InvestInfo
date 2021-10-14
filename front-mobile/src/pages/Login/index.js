@@ -34,8 +34,7 @@ export default function Login ({ navigation }){
             source={backgroundImage} style={styles.backgorund}>
                 <View 
                     style={styles.ct_Login}>
-                    <Text style={styles.text_Log}>Log</Text>
-                    <Text style={styles.text_in}>in</Text>
+                    <Text style={styles.text_Log}>Entrar</Text>
                 </View>
                 <View
                     style={styles.container}>

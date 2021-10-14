@@ -48,8 +48,7 @@ export default function Cadastrar ({navigation}){
             source={backgroundImage} style={styles.backgorund}>
                     <View
                         style={styles.ct_Cadastro}>
-                         <Text style={styles.text_Cadas}>Cadas</Text>
-                         <Text style={styles.text_tro}>tro</Text>
+                         <Text style={styles.text_Cadas}>Cadastrar</Text>
                     </View>
                     <TextInput
                         style={styles.input}

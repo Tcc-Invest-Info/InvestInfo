@@ -9,18 +9,12 @@ const styles = StyleSheet.create({
     },
     ct_Login:{
         flexDirection:'row',
-        justifyContent:'center'
+        justifyContent:'center',
     },
     text_Log:{
-        fontSize:30,
+        fontSize:45,
         fontWeight:'bold',
         color:'black',
-        marginVertical:30
-    },
-    text_in:{
-        fontSize:30,
-        fontWeight:'bold',
-        color:'#fff',
         marginVertical:30
     },
     container:{

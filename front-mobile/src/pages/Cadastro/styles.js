@@ -13,17 +13,11 @@ const styles = StyleSheet.create({
         justifyContent:'center'
     },
     text_Cadas:{
-        fontSize:30,
+        fontSize:45,
         fontWeight:'bold',
         color:'black',
         marginVertical:30
 
-    },
-    text_tro:{
-        fontSize:30,
-        fontWeight:'bold',
-        color:'#fff',
-        marginVertical:30
     },
     container:{
         alignItems:'center',

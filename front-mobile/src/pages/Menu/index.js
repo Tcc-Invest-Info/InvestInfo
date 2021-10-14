@@ -13,10 +13,11 @@ import {Entypo } from '@expo/vector-icons'
 export default function Menu ({navigation}){
 
     function ajudaAlert(){
-        Alert.alert('Menu de Opções', 
-                    '"Chatboot": você ira interagir com um Chatboot ' + 
-                    'sobre diversos assuntos relaciondos a educação financeira '+
-                    '"Noticias": Acesso as principais noticias relacionas a educação financeira',[
+        Alert.alert('Menu de opções', 
+                    '"Chatbot": você ira interagir com um Chatbot ' + 
+                    'sobre diversos assuntos relaciondos a educação financeira    '+
+
+                    '"Noticias": Acesso as principais noticias sobre  educação financeira',[
             {
                 text:'OK',
             }
