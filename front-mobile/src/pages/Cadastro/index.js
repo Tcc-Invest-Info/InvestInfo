@@ -1,86 +1,108 @@
 import { setStatusBarNetworkActivityIndicatorVisible } from 'expo-status-bar'
 import React, { useEffect, useState } from 'react'
-import { 
-        ImageBackground,
-        View, 
-        Text, 
-        TouchableOpacity,
-        TextInput,
-        Alert
+import {
+    ImageBackground,
+    View,
+    Text,
+    TouchableOpacity,
+    TextInput,
+    Alert
 } from 'react-native'
 import backgroundImage from '../../../assets/background.png'
 import api from '../../api'
 import styles from './styles'
 
-export default function Cadastrar ({navigation}){
+export default function Cadastrar({ navigation }) {
 
-   /* const[usuario, setUsuario] = useState(); 
+    const [usuario, setUsuario] = useState();
 
-    useEffect(() => {
-        getUser();
-    })
+    const [nome, setNome] = useState('');
+    const [email, setEmail] = useState('');
+    const [senha, setSenha] = useState('');
+    const [confirmarsenha, setConfirmarSenha] = useState('');
 
-    async function getUser() {
-        await api.get("/users")
-        .then(response => setUsuario(response.data))
-        .catch(error => console.log(error));
-    } */
+    async function postUser() {
+        await api.post("/users", {
+            name: nome,
+            email: email,
+            password: senha
+        })
+            .then(response => {
+                setUsuario(response.data)
+                Alert.alert('Cadastro de usuario',
+                    'cadastro realizado', [
+                    {
+                        text: 'OK',
+                        onPress() { navigation.navigate('Login') }
+                    }
+                ])
+            })
+            .catch(error => console.log(error));
+    }
 
-    function cadatroAlert(){
-        Alert.alert('Cadastro de usuario', 
-                    'cadastro realizado',[
-            {
-                text:'OK',
-                onPress(){navigation.navigate('Login')
+    function cadatroAlert() {
+        if (senha !== confirmarsenha) {
+            Alert.alert('Senha divergente',
+                'cadastro não realizado', [
+                {
+                    text: 'OK',
                 }
-            }
-        ])
-    }
-    const state = {
-        nome:'',
-        email:'',
-        senha:'',
-        confirmasenha:''
+            ])
+            return
+        }
+        postUser()
     }
 
-    return(
-        <ImageBackground 
+    return (
+        <ImageBackground
             source={backgroundImage} style={styles.backgorund}>
-                    <View
-                        style={styles.ct_Cadastro}>
-                         <Text style={styles.text_Cadas}>Cadastrar</Text>
-                    </View>
-                    <TextInput
-                        style={styles.input}
-                        placeholder='Nome completo'
-                        value={state.nome}/>
-                    <TextInput
-                        style={styles.input}
-                        placeholder='E-mail'
-                        keyboardType='email-address'
-                        value={state.email}/>
-                    <TextInput
-                        style={styles.input}
-                        placeholder='Senha'
-                        secureTextEntry={true}
-                        value={state.senha}/>
-                    <TextInput
-                        style={styles.input}
-                        placeholder='Confirmar senha'
-                        secureTextEntry={true}
-                        value={state.confirmasenha}/>
-                    <View
-                        style={styles.container}>
-                        <TouchableOpacity
+            <View
+                style={styles.ct_Cadastro}>
+                <Text style={styles.text_Cadas}>Cadastrar</Text>
+            </View>
+            <TextInput
+                style={styles.input}
+                placeholder='Nome completo'
+                value={nome}
+                onChangeText={(text) => {
+                    setNome(text)
+                }} />
+            <TextInput
+                style={styles.input}
+                placeholder='E-mail'
+                keyboardType='email-address'
+                value={email}
+                onChangeText={(text) => {
+                    setEmail(text)
+                }} />
+            <TextInput
+                style={styles.input}
+                placeholder='Senha'
+                secureTextEntry={true}
+                value={senha}
+                onChangeText={(text) => {
+                    setSenha(text)
+                }} />
+            <TextInput
+                style={styles.input}
+                placeholder='Confirmar senha'
+                secureTextEntry={true}
+                value={confirmarsenha}
+                onChangeText={(text) => {
+                    setConfirmarSenha(text)
+                }} />
+            <View
+                style={styles.container}>
+                <TouchableOpacity
 
-                            onPress={()=> cadatroAlert()}
-                            style={styles.bt_cadastrar}>
-                            <Text
-                                style={styles.text_cadastrar}>
-                                Cadastrar
-                            </Text>
-                        </TouchableOpacity>
-                    </View>
+                    onPress={() => cadatroAlert()}
+                    style={styles.bt_cadastrar}>
+                    <Text
+                        style={styles.text_cadastrar}>
+                        Cadastrar
+                    </Text>
+                </TouchableOpacity>
+            </View>
         </ImageBackground>
     )
 }

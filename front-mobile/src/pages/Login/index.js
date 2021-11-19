@@ -12,22 +12,17 @@ import styles from './styles'
 
 export default function Login ({ navigation }){
 
-   /* const[login, setLogin] = useState(); 
+    const [email, setEmail] = useState('');
+    const [senha, setSenha] = useState('');
 
-    useEffect(() => {
-        getLogin();
-    })
-
-    async function getLogin() {
-        await api.get("/login")
-        .then(response => console.log(response))
-        .catch(error => console.log(error));
-  }  */ 
-
-    const state = {
-        email:'',
-        senha:'',
-    }
+  /*  async function postLogin() {
+        await api.post("/users/login", {
+            email: email,
+            password: senha
+        })
+            .then(() => navigation.navigate('Menu'))
+            .catch(error => console.log(error));
+    }*/
 
     return(
         <ImageBackground 
@@ -42,12 +37,18 @@ export default function Login ({ navigation }){
                         style={styles.input}
                         placeholder='E-mail'
                         keyboardType='email-address'
-                        value={state.email}/>
+                        value={email}
+                        onChangeText={(text) => {
+                            setEmail(text)
+                        }}/>
                     <TextInput
                         style={styles.input}
                         placeholder='Senha'
                         secureTextEntry={true}
-                        value={state.senha}/>
+                        value={senha}
+                        onChangeText={(text) => {
+                            setSenha(text)
+                        }}/>
                 </View>
                 <View
                     style={styles.ct_esq_senha}>
