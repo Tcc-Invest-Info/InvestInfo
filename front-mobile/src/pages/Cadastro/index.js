@@ -20,7 +20,7 @@ export default function Cadastrar({ navigation }) {
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
     const [confirmarsenha, setConfirmarSenha] = useState('');
-
+   
     async function postUser() {
         await api.post("/users", {
             name: nome,
@@ -43,6 +43,14 @@ export default function Cadastrar({ navigation }) {
     function cadatroAlert() {
         if (senha !== confirmarsenha) {
             Alert.alert('Senha divergente',
+                'cadastro não realizado', [
+                {
+                    text: 'OK',
+                }
+            ])
+            return
+        } else  if (nome === "" || email === "" || senha === "" ||confirmarsenha === "") {
+            Alert.alert('Existe campos em branco',
                 'cadastro não realizado', [
                 {
                     text: 'OK',

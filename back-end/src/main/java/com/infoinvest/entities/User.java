@@ -9,6 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.Email;
 
 @Entity
 @Table(name = "tb_users")
@@ -19,10 +20,13 @@ public class User implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+
 	private String name;
-	
+
+	@Email(message = "Endereço de e-mail enviado em um formato inválido")
 	@Column(unique = true)
 	private String email;
+
 	private String password;
 
 	public User() {
