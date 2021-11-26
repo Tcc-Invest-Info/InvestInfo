@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.infoinvest.dto.UserDTO;
+import com.infoinvest.entities.User;
 import com.infoinvest.exception.UnsuportedUserAndNewsException;
 import com.infoinvest.services.UserService;
 
@@ -37,6 +38,21 @@ public class UserController {
 
 		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(dto.getId()).toUri();
 		return ResponseEntity.created(uri).body(dto);
+	}
 
+	@PostMapping("/login")
+	public User login(@RequestBody UserDTO dto) {
+		if (dto.getEmail().equals("") || dto.getPassword().equals(""))
+			throw new UnsuportedUserAndNewsException("Existe campos em branco");
+
+		return service.login(dto.getEmail(), dto.getPassword());
+	}
+
+	@PostMapping("/esqueciSenha")
+	public ResponseEntity<UserDTO> esqueciSenha(@RequestBody UserDTO dto) {
+		if (dto.getEmail().equals(""))
+			throw new UnsuportedUserAndNewsException("Existe campos em branco");
+		UserDTO name = service.esqueciSenha(dto.getEmail());
+		return ResponseEntity.ok().body(name);
 	}
 }
