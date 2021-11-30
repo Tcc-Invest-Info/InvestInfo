@@ -11,9 +11,13 @@ import com.infoinvest.dto.UserDTO;
 import com.infoinvest.entities.User;
 import com.infoinvest.exception.UnsuportedUserAndNewsException;
 import com.infoinvest.repositories.UserRepository;
+import com.infoinvest.utils.EmailUtils;
+import com.infoinvest.utils.JavaUtils;
 
 @Service
 public class UserService {
+
+	private JavaUtils java = new JavaUtils();
 
 	@Autowired
 	private UserRepository repository;
@@ -26,7 +30,10 @@ public class UserService {
 
 	@Transactional
 	public UserDTO insert(UserDTO dto) {
-		User user = new User(null, dto.getName(), dto.getEmail(), dto.getPassword());
+		List<User> list = repository.findByEmail(dto.getEmail());
+		if (list.size() > 0)
+			throw new UnsuportedUserAndNewsException("E-mail já existente");
+		User user = new User(null, dto.getName(), dto.getEmail(), java.criptografar(dto.getPassword()));
 		user = repository.save(user);
 		return new UserDTO(user);
 	}
@@ -36,20 +43,23 @@ public class UserService {
 		List<User> list = repository.findByEmail(email);
 		if (list.size() == 0)
 			throw new UnsuportedUserAndNewsException("Erro para logar, usuário ou senha incorretos");
-		if (!list.get(0).getPassword().equals(password))
+		if (!java.verificarSenha(password, list.get(0).getPassword()))
 			throw new UnsuportedUserAndNewsException("Erro para logar, usuário ou senha incorretos");
 		return list.get(0);
 	}
 
-	@Transactional(readOnly = true)
+	@Transactional
 	public UserDTO esqueciSenha(String email) {
 		List<User> list = repository.findByEmail(email);
-		String novaSenha = "123456";
 		if (list.size() == 0)
 			throw new UnsuportedUserAndNewsException("Usuário não encontrado");
 
-		list.get(0).setPassword(novaSenha);
-		User user = repository.save(list.get(0));
+		User user = repository.getOne(list.get(0).getId());
+		String senha = java.gerarSenhaRandom();
+		String senhaCriptografada = java.criptografar(senha);
+		user.setPassword(senhaCriptografada);
+		user = repository.save(user);
+		EmailUtils.enviarEmail(user.getEmail(), user.getName(), senha);
 		return new UserDTO(user);
 	}
 }

@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -32,12 +33,13 @@ public class UserController {
 
 	@PostMapping
 	public ResponseEntity<UserDTO> insert(@RequestBody UserDTO dto) {
-		dto = service.insert(dto);
 		if (dto.getName().equals("") || dto.getEmail().equals("") || dto.getPassword().equals(""))
 			throw new UnsuportedUserAndNewsException("Existe campos em branco");
 
+		dto = service.insert(dto);
 		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(dto.getId()).toUri();
 		return ResponseEntity.created(uri).body(dto);
+
 	}
 
 	@PostMapping("/login")
@@ -48,11 +50,11 @@ public class UserController {
 		return service.login(dto.getEmail(), dto.getPassword());
 	}
 
-	@PostMapping("/esqueciSenha")
+	@PutMapping("/esqueciSenha")
 	public ResponseEntity<UserDTO> esqueciSenha(@RequestBody UserDTO dto) {
 		if (dto.getEmail().equals(""))
 			throw new UnsuportedUserAndNewsException("Existe campos em branco");
-		UserDTO name = service.esqueciSenha(dto.getEmail());
-		return ResponseEntity.ok().body(name);
+		dto = service.esqueciSenha(dto.getEmail());
+		return ResponseEntity.ok().body(dto);
 	}
 }
